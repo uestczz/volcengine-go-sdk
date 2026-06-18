@@ -29,10 +29,14 @@ const (
 )
 
 type ChatMessageImageURL struct {
-	URL       string         `json:"url,omitempty"`
-	Detail    ImageURLDetail `json:"detail,omitempty"`
-	MinPixels *int64         `json:"min_pixels,omitempty"`
-	MaxPixels *int64         `json:"max_pixels,omitempty"`
+	URL             string           `json:"url,omitempty"`
+	Detail          ImageURLDetail   `json:"detail,omitempty"`
+	ImagePixelLimit *ImagePixelLimit `json:"image_pixel_limit,omitempty"`
+}
+
+type ImagePixelLimit struct {
+	MinPixels *int64 `json:"min_pixels,omitempty"`
+	MaxPixels *int64 `json:"max_pixels,omitempty"`
 }
 
 type ChatMessageVideoURL struct {

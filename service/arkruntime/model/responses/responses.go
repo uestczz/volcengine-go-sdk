@@ -3958,9 +3958,9 @@ type ContentItemImage struct {
 
 	Type            ContentItemType_Enum         `protobuf:"varint,1,opt,name=type,proto3,enum=responses.ContentItemType_Enum" json:"type,omitempty"` // sdk:  {"enum": {"const": "input_image"}}
 	Detail          *ContentItemImageDetail_Enum `protobuf:"varint,2,opt,name=detail,proto3,enum=responses.ContentItemImageDetail_Enum,oneof" json:"detail,omitempty"`
-	ImageUrl        *string                      `protobuf:"bytes,3,opt,name=image_url,json=imageUrl,proto3,oneof" json:"image_url,omitempty"` // sdk: {"cardinality": "optional"}
-	FileId          *string                      `protobuf:"bytes,4,opt,name=file_id,json=fileId,proto3,oneof" json:"file_id,omitempty"`       // sdk: {"skip": ["go", "python_input", "python_output", "java"]}
-	ImagePixelLimit *ImagePixelLimit             `protobuf:"bytes,6,opt,name=image_pixel_limit,json=imagePixelLimit,proto3,oneof" json:"-"`    // @inject_tag: json:"-"  sdk: {"skip": ["go", "python_input", "python_output", "java"]} // sdk: {"skip": ["go", "python_input", "python_output", "java"]}
+	ImageUrl        *string                      `protobuf:"bytes,3,opt,name=image_url,json=imageUrl,proto3,oneof" json:"image_url,omitempty"`                        // sdk: {"cardinality": "optional"}
+	FileId          *string                      `protobuf:"bytes,4,opt,name=file_id,json=fileId,proto3,oneof" json:"file_id,omitempty"`                              // sdk: {"skip": ["go", "python_input", "python_output", "java"]}
+	ImagePixelLimit *ImagePixelLimit             `protobuf:"bytes,6,opt,name=image_pixel_limit,json=imagePixelLimit,proto3,oneof" json:"image_pixel_limit,omitempty"` // @inject_tag: json:"-"  sdk: {"skip": ["go", "python_input", "python_output", "java"]} // sdk: {"skip": ["go", "python_input", "python_output", "java"]}
 }
 
 func (x *ContentItemImage) Reset() {
